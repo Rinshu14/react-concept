@@ -5,7 +5,7 @@ let reducer=(state=2,action)=>//this reducer function takes 2 argument first one
     switch(action.type)//we applied a switch case on value of type property of action object
     {
         case "increment":
-            return state+1;
+            return state+action.payload;//adding payload so that state will get increment by the value that is provided in payload by user
         
             case "decrement":
             return state-1;

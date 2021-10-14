@@ -13,8 +13,14 @@ return state;
     <div>
     <h4>Hiii</h4>
      <button onClick={()=>{
-       dispatch(actionCreator());//when this event get dispatch this went to store that gives it to reducer reducer accept that in action argument that cahnges in state that will reflect in store and due to provider it refelect in all its child and because the change in state all childs will rerender with new state
+       dispatch(actionCreator(1));//when this event get dispatch this went to store that gives it to reducer reducer accept that in action argument that cahnges in state that will reflect in store and due to provider it refelect in all its child and because the change in state all childs will rerender with new state
      }}>+</button>
+    
+    <button onClick={()=>{
+       dispatch(actionCreator(10));//when this event get dispatch this went to store that gives it to reducer reducer accept that in action argument that cahnges in state that will reflect in store and due to provider it refelect in all its child and because the change in state all childs will rerender with new state
+      //we are providing value 10 that is cathes by actioncreator argument and provided to payload
+     }}>+10</button>
+
      <p>{state}</p>
      <button onClick={()=>{
        dispatch(actionsubCreator());
